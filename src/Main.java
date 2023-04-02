@@ -4,25 +4,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
-        System.out.println("sum of fibonacci numbers- "+sumFibanacci(number+1));
-        System.out.println("5 problem solution- "+fibanacci(number));
+        int number2 = sc.nextInt();
+        System.out.println(degree(number,number2));
     }
-
-
-public static int sumFibanacci(int number){
-        if (number==0){
-            return 0;
+public static int degree(int number,int number2){
+        if(number2==0){
+            return 1;
         }else{
-            return fibanacci(number)+fibanacci(number-1);
+            return number*degree(number,number2-1);
         }
 }
-    public static int fibanacci(int number) {
-        if (number <= 1) {
-            return number;
-        }else{
-                return fibanacci(number - 1) + fibanacci(number - 2);
-            }
-        }
-    }
+
+}
 
 
