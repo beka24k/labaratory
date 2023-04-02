@@ -1,18 +1,23 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int[] arr = {3, 2, 4, 1};
-        double sum=findAvg(arr,arr.length);
-        double nofn=arr.length;
-        System.out.println(sum/nofn);
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        System.out.println(isPrime(number, number/2));
     }
 
-    public static int findAvg(int[] arr, int n) {
-        if (n == 0) {
+    public static int isPrime(int number, int i) {
+        if (i == 1) {
+            System.out.println("Prime");
+            return 1;
+        }
+        else if (number % i == 0) {
+            System.out.println("Composite");
             return 0;
-        } else {
-            int sum;
-            sum=arr[n-1]+findAvg(arr,n-1);
-            return sum;
+        }
+        else {
+            return isPrime(number, i-1);
         }
     }
 }
