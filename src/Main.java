@@ -1,20 +1,26 @@
 import java.util.Scanner;
 
 public class Main {
+    //main part of taking data from user
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
-        int number2 = sc.nextInt();
-        System.out.println(degree(number,number2));
+        String number = sc.next();
+        int counter = number.length() - 1;//counter to stop the recursion and make a base case
+        System.out.println(isDigit(number, counter));
     }
-public static int degree(int number,int number2){
-        if(number2==0){
-            return 1;
-        }else{
-            return number*degree(number,number2-1);
-        }
-}
 
+    //using data to make function for solution
+    public static int isDigit(String number, int counter) {
+        char c = number.charAt(counter);
+        if (counter == 0) {//base case
+            return 1;
+        }
+        if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') {//checker if the function will found letter witout
+            return 0;
+        } else { //recursion case
+            return isDigit(number, counter - 1);//recursion for making easier problem
+        }
+    }
 }
 
 
