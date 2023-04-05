@@ -1,6 +1,6 @@
 # labaratory
 # **Description**
-Welcome aboard, fellow developer. This is where you can find interesting methods (used by the best senior lecturers in the laboratory) using recursion and functions which you are free to use
+Welcome aboard, fellow developer. This is where you can find interesting methods (used *Laboratory 1* from the best senior lecturer) using recursion and functions which you are free to use
 ## **Recursion and Functions in Java**
 Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
 
