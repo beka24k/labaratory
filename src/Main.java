@@ -1,24 +1,18 @@
 import java.util.Scanner;
 
 public class Main {
-    //main part of taking data from user
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String number = sc.next();
-        int counter = number.length() - 1;//counter to stop the recursion and make a base case
-        System.out.println(isDigit(number, counter));
+        int number = sc.nextInt();
+        int number2= sc.nextInt();
+        System.out.print(eucladianAlgorithm(number, number2));
     }
+    public static int eucladianAlgorithm(int n, int m) {
 
-    //using data to make function for solution
-    public static String isDigit(String number, int counter) {
-        char c = number.charAt(counter);
-        if (counter == 0) {//base case
-            return "Yes";
-        }
-        if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') {//checker if the function will found letter witout
-            return "No";
-        } else { //recursion case
-            return isDigit(number, counter - 1);//recursion for making easier problem
+        if (m == 0) {
+            return n;//base case
+        } else {
+            return eucladianAlgorithm(m, n%m);//recursion case
         }
     }
 }
