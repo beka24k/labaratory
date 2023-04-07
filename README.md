@@ -16,5 +16,4 @@ __binomial coefficient(n,k)__ - is the order of choosing ‘k’ results from th
 ## Contributing
 If you'd like to contribute to this repository, please fork the repository and create a pull request with your changes. Be sure to include detailed information about the changes you've made and any new examples or functions you've added.
 
-## License
-This repository is licensed under the MIT license. See the LICENSE file for more information.
+
